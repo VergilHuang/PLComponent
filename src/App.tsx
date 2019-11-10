@@ -1,31 +1,34 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useState } from 'react';
 import './App.sass';
+import NavigationHead from './component/NavigationHead';
+import NavigationSideBar from './component/NavigationSideBar';
 
 const App: React.FC = () => {
+
+  const [IsSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const onOpenMenu = () => {
+    console.log('open')
+    setIsSidebarOpen(true)
+  }
   return (
     <div className="App">
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-      <div className="container">
-        <div className="col-xs-12">1</div>
-        <div className="col-xs-12 col-sm-6 col-md-3">2</div>
-        <div className="col-xs-12 col-sm-6 col-md-3">3</div>
-        <div className="col-xs-12 col-sm-6 col-md-3">4</div>
-        <div className="col-xs-12 col-sm-6 col-md-3">5</div>
-      </div>
+      <NavigationHead onMenuClick={onOpenMenu} />
+      <NavigationSideBar active={IsSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
+      <main>
+        <div className="container black">
+          <div className="col-xs-12 yellow">1</div>
+          <div className="col-xs-12 col-sm-6 col-md-3 yellow">2</div>
+          <div className="col-xs-12 col-sm-6 col-md-3 yellow">3</div>
+          <div className="col-xs-12 col-sm-6 col-md-3 yellow">4</div>
+          <div className="col-xs-12 col-sm-6 col-md-3 yellow">5</div>
+        </div>
+      </main>
+      <footer className="container gray">
+        <div className="col-xs-12 col-sm-4 ">6</div>
+        <div className="col-xs-12 col-sm-4 ">7</div>
+        <div className="col-xs-12 col-sm-4 ">8</div>
+      </footer>
     </div>
   );
 }

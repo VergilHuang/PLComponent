@@ -1,0 +1,24 @@
+.navigation-sidebar-container
+    width: 0vmin
+    height: 100vh
+    z-index: 9999
+    position: absolute
+    background: #eee
+    top: 0
+    left: 0
+    overflow: hidden
+    transition: all 0.3s ease-out
+
+    &.sidebar-show
+        width: 40vmin
+
+    &.sidebar-hide
+        width: 0vmin
+
+    .sidebar-list
+        padding: 0
+        margin: 0
+        list-style: none
+
+        .sidebar-list-item
+            height: 32px
