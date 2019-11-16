@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './App.sass';
 import NavigationHead from './component/NavigationHead';
 import NavigationSideBar from './component/NavigationSideBar';
+import PLInput from './component/PLInput';
 
 const App: React.FC = () => {
 
