@@ -1,3 +1,7 @@
+/*
+    處理PLInput的validation message顯示
+*/
+
 import React, { FC } from 'react'
 import './style.sass'
 
