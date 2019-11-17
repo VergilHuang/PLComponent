@@ -1,0 +1,20 @@
+@import src/assets/styles/company-colors/style-1-colors
+
+.pl-callback-msg
+    transition: all 0.25s ease-in-out
+    position: absolute
+    top: 20px
+    left: 0
+    z-index: 1
+    user-select: none
+    opacity: 0
+
+    &.active
+        top: 26px
+        opacity: 1
+
+    &.danger
+        color: $danger
+
+    &.warning
+        color: $warning

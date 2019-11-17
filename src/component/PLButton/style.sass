@@ -1,0 +1,31 @@
+.pl-btn-container
+    position: relative
+    z-index: 1
+    overflow: hidden
+    margin: 0
+    padding: 9px
+    border: 0
+    outline: none
+
+    .ripple
+        position: absolute
+        top: 0
+        left: 0
+        width: 1px
+        height: 1px
+        border: 1px solid transparent
+        border-radius: 100px
+        animation-name: wave
+        animation-timing-function: ease-out
+        animation-duration: 1.5s
+        animation-fill-mode: none
+        animation-iteration-count: 1
+
+@keyframes wave
+    from
+        transform: scale(0)
+        opacity: 0.5
+
+    to
+        transform: scale(100)
+        opacity: 0

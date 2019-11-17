@@ -1,0 +1,43 @@
+@import src/assets/styles/company-colors/style-1-colors
+
+.pl-input-container
+    display: inline-block
+    border: 1px solid #888
+    border-radius: 8px
+    background: #fff
+    padding: 2px 8px 3px
+    min-width: 160px
+    position: relative
+    transition: border-color 0.25s ease-in-out
+
+    &.danger
+        border-color: $danger
+
+    &.warning
+        border-color: $warning
+
+    .pl-input
+        width: 100%
+        height: 18px
+        outline: none
+        border: 0
+        padding: 2px
+
+        // &:focus + .pl-input-placeholder
+
+    .pl-input-placeholder
+        color: $input-placeholder-color
+        position: absolute
+        top: 4px
+        left: 9px
+        font-size: 0.9rem
+        user-select: none
+        cursor: text
+        transition: all 0.25s ease-in-out
+
+        &.offset-up
+            top: -22px
+            left: 0
+            font-size: 0.75rem
+            color: $label-color
+            font-weight: 500
