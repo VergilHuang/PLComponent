@@ -1,0 +1,43 @@
+.responsive-tableview
+    // border: 1px solid #a8a8a8
+    border-collapse: collapse
+    width: 100%
+    tr
+        th,td
+            // border: 1px solid #a8a8a8
+            text-align: center
+        th
+            background: #222
+            color: #fff
+        td
+            .prefix-label
+                display: none
+
+    tr:nth-child(odd)
+        background: #ddd
+    tr:nth-child(even)
+        background: #eee
+
+@media ( max-width: 768px ) 
+    .responsive-tableview
+        tr
+            th
+                display: none
+            td
+                display: block
+
+                .prefix-label
+                    display: inline-block
+                    float: left
+                .td-content
+                    display: inline-block
+                    float: right
+
+                &::after
+                    content: ""
+                    clear: both
+                    display: table
+                &::before
+                    content: ""
+                    clear: both
+                    display: table
