@@ -10,7 +10,9 @@ const Overlay: FC<Props> = (props) => {
 
     return (
         <div className={`overlay-boundery ${props.show ? "overlay-show" : "overlay-hide"}`} onClick={props.onClick}>
-
+            {
+                props.children
+            }
         </div>
     )
 }
