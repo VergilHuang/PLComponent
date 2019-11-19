@@ -1,18 +1,21 @@
-import React, { useState } from 'react';
-import { Switch, Route, HashRouter } from 'react-router-dom';
+import React, { useState, useMemo } from 'react';
+import { Switch, HashRouter, Redirect } from 'react-router-dom';
+import { renderRoutes } from 'react-router-config';
 import './App.sass';
 import NavigationHead from './component/NavigationHead';
 import NavigationSideBar from './component/NavigationSideBar';
-import RwdGrid from './pages/RwdGrid';
-import TableViewTemplate from './pages/TableViewTemplate';
-import ModelTemplate from './pages/ModelTemplate';
-import ButtonTemplate from './pages/ButtonTemplate';
-import InputTemplate from './pages/InputTemplate';
+import routeConfig from './model/router/routeConfig';
 
 
 const App: React.FC = (props) => {
 
   const [IsSidebarOpen, setIsSidebarOpen] = useState(false)
+
+  const Routers = useMemo(() => {
+    const _routers = renderRoutes(routeConfig)
+    _routers.props.children.push(<Redirect from="/" to="/TabTemplate"></Redirect>)
+    return _routers
+  }, [])
 
   const onOpenMenu = () => {
     console.log('open')
@@ -20,28 +23,12 @@ const App: React.FC = (props) => {
   }
   return (
     <div className="App">
-      <NavigationHead onMenuClick={onOpenMenu} />
-      <NavigationSideBar active={IsSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
       <HashRouter>
         <NavigationHead onMenuClick={onOpenMenu} />
         <NavigationSideBar active={IsSidebarOpen} onClose={() => setIsSidebarOpen(false)} />
         <main>
           <Switch>
-            <Route path="/rwdGrid">
-              <RwdGrid />
-            </Route>
-            <Route path="/tableView">
-              <TableViewTemplate />
-            </Route>
-            <Route path="/model">
-              <ModelTemplate />
-            </Route>
-            <Route path="/buttonTemplate">
-              <ButtonTemplate />
-            </Route>
-            <Route path="/inputTemplate">
-              <InputTemplate />
-            </Route>
+            {Routers}
           </Switch>
         </main>
         <footer className="container gray">

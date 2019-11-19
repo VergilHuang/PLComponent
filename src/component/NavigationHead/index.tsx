@@ -1,25 +1,28 @@
 import React, { FC } from 'react'
 import './style.sass'
-import { Link, Redirect } from 'react-router-dom'
+import { Link, withRouter, RouteComponentProps } from 'react-router-dom'
+import routeConfig from '../../model/router/routeConfig'
 
 type Props = {
     onMenuClick: () => void
-}
+} & RouteComponentProps
 const NavigationHead: FC<Props> = (props) => {
-
 
     return (
         <nav className="navigation-head-container container">
             <button onClick={props.onMenuClick}>Menu</button>
-            <Redirect from="/" to="/model"></Redirect>
-            <Link to="/rwdGrid">Rwd-Grid</Link>
-            -
-            <Link to="/tableView">TableView</Link>
-            -
-            <Link to="/model">Model</Link>
+            <ul className="navigation-link-container">
+                {
+                    routeConfig.map(route => {
+                        return <li key={route.key} className="navigation-link-item">
+                            <a onClick={() => props.history.push(route.path as string)}>{route.name}</a>
+                        </li>
+                    })
+                }
+            </ul>
         </nav>
     )
 }
 
 
-export default NavigationHead
+export default withRouter(NavigationHead)

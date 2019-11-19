@@ -15,7 +15,7 @@ const ModelTemplate: FC<Props> = (props) => {
                     </button>
                 </div>
             </div>
-            <PLModal visible={true} />
+            {/* <PLModal visible={true} /> */}
         </div>
     );
 };
