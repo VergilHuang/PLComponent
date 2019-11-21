@@ -1,0 +1,22 @@
+.tool-action-box
+    height: 55px
+    display: flex
+    justify-content: flex-start
+    .tool-action-list
+        display: inline-block
+        align-self: center
+
+.tool-action-box-float
+    &::after
+        content: ""
+        display: table
+        clear: both
+    &::before
+        content: ""
+        display: table
+        clear: both
+    .tool-action-list-float-left
+        float: left
+
+    .tool-action-list-float-right
+        float: right

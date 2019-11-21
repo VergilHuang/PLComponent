@@ -1,0 +1,65 @@
+@import src/assets/styles/company-colors/style-1-colors
+@import src/assets/styles/grid-def
+
+$content-padding: 8px 16px
+
+.pl-modal-box
+    min-width: 100vw
+    min-height: 100vh
+    background: #EEE
+    position: absolute
+    left: 0
+    top: 0
+    z-index: 9999
+
+    &.pop-up
+        animation: scale-reverse 0.3s
+        animation-direction: reverse
+        animation-fill-mode: forwards
+        animation-timing-function: ease-in-out
+        display: block
+
+    &.pop-out
+        display: none
+
+    .pl-modal-box-head
+        padding: $content-padding
+        height: 26px
+        border-bottom: 1px solid #a8a8a8
+
+        .pl-modal-box-head-title
+            display: inline-block
+            line-height: 28px
+            font-size: 14px
+            font-weight: bold
+
+    .pl-modal-box-body
+        padding: $content-padding
+
+    .pl-modal-box-footer
+        height: 55px
+        width: 100%
+        border-top: 1px solid #a8a8a8
+        position: absolute
+        bottom: 0
+
+        .pl-modal-confirm-btn
+
+        .pl-modal-cancel-btn
+            margin-left: 8px
+
+@keyframes scale-reverse
+    to
+        transform: scale(0.5)
+
+@media (min-width: $sm)
+    $mw: 40vw
+    $mh: 30vh
+
+    .pl-modal-box
+        min-width: $mw
+        min-height: $mh
+        left: calc(50vw - #{$mw} / 2)
+        top: calc(50vh - #{$mh} / 2)
+        box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5)
+        border-radius: 6px

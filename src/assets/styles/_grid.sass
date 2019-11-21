@@ -1,3 +1,5 @@
+@import src/assets/styles/grid-def
+
 $grid-division: 8.33333%
 $col-map: col-xs, col-sm, col-md, col-lg
 
@@ -22,17 +24,17 @@ $col-map: col-xs, col-sm, col-md, col-lg
     .col-xs-#{$i}
         flex: 0 0 calc(#{$grid-division} * #{$i})
 
-@media (min-width: 768px)
+@media (min-width: $sm)
     @for $i from 1 through 12
         .col-sm-#{$i}
             flex: 0 0 calc(#{$grid-division} * #{$i})
 
-@media (min-width: 992px)
+@media (min-width: $md)
     @for $i from 1 through 12
         .col-md-#{$i}
             flex: 0 0 calc(#{$grid-division} * #{$i})
 
-@media (min-width: 1200px)
+@media (min-width: $lg)
     @for $i from 1 through 12
         .col-lg-#{$i}
             flex: 0 0 calc(#{$grid-division} * #{$i})

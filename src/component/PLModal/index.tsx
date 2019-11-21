@@ -1,24 +1,50 @@
 import React, { FC, useEffect, useState } from 'react';
+import './style.sass'
 import Overlay from '../Overlay';
+import PLButton from '../PLButton';
+import PrefixItem from '../PrefixItem';
+import ToolBar from '../ToolBar';
 type Props = {
     visible?: boolean
-    onOK: () => void,
-    onClose: () => void
+    onOK?: () => void,
+    onCancel?: () => void,
+    onOverlayClcik?: () => void
 }
 
 const PLModal: FC<Props> = (props) => {
 
-    useEffect(() => {
-        if (props.visible) {
-            props.onClose && props.onClose();
-        }
+    const onOverlayClick = () => {
+        props.onOverlayClcik && props.onOverlayClcik()
+    }
 
-    }, [props.visible])
+    const handleCancel = () => {
+        props.onCancel && props.onCancel()
+
+    }
+
+    const handleOk = () => {
+        props.onOK && props.onOK()
+
+    }
 
     return (
-        <Overlay show={props.visible} onClick={() => { }}>
-
-        </Overlay>
+        <>
+            <div className={`pl-modal-box  ${props.visible ? 'pop-up' : 'pop-out'}`}>
+                <div className="pl-modal-box-head">
+                    <h3 className="pl-modal-box-head-title">修改資訊</h3>
+                </div>
+                <div className="pl-modal-box-body">
+                    {props.children}
+                </div>
+                <div className="pl-modal-box-footer">
+                    <ToolBar alignment="right">
+                        <PLButton className="pl-modal-confirm-btn" onClick={handleOk}>確認</PLButton>
+                        <PLButton className="pl-modal-cancel-btn" onClick={handleCancel}>取消</PLButton>
+                    </ToolBar>
+                </div>
+            </div>
+            <Overlay show={props.visible} onClick={onOverlayClick} />
+        </>
     );
 };
 
