@@ -11,9 +11,6 @@ const TabTemplate: FC<Props> = (props) => {
 
     return (
         <div className="tab-template-container">
-            <PLButton onClick={() => setactiveIndex('dt')} >
-                转换
-            </PLButton>
             <PLTab activeIndex={activeIndex}>
                 <PLTabPanel tab={'tab 1'} identifier="vg">
                     123
@@ -21,8 +18,8 @@ const TabTemplate: FC<Props> = (props) => {
                 <PLTabPanel tab={'tab 2'} identifier="dt">
                     321
                 </PLTabPanel>
-                <PLTabPanel tab={<button onClick={() => console.log('heihei')}>haha</button>} identifier="dt">
-                    321
+                <PLTabPanel tab={<button onClick={() => console.log('hello world')}>haha</button>} identifier="ab">
+                    321daf
                 </PLTabPanel>
             </PLTab>
 

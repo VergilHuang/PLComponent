@@ -1,7 +1,7 @@
 import React, { FC, useEffect, useState, ReactNode } from 'react';
 export type PLTabPanelProps = {
     identifier: string | number,
-    tab: ReactNode | string
+    tab: React.ReactElement | string;
 }
 
 export const PLTabPanel: FC<PLTabPanelProps> = (props) => {

@@ -1,8 +1,8 @@
-import React, { FC, useMemo, ReactNodeArray, useState } from 'react';
+import React, { FC, useMemo, ReactNodeArray, useState, ButtonHTMLAttributes, PropsWithChildren } from 'react';
 import PLTabPanel, { PLTabPanelProps } from './PLTabPanel';
 import PLButton from '../PLButton';
-type Props = {
-    activeIndex?: string | number
+interface Props {
+    activeIndex?: string | number;
 }
 
 const PLTab: FC<Props> = (props) => {
@@ -20,8 +20,6 @@ const PLTab: FC<Props> = (props) => {
         Panels = Panels.filter(component => component !== undefined);
     }
 
-    console.log(Panels);
-
     // render PLPanel Button
     const buttonRow = useMemo(() => {
         return React.Children.map(Panels, (thisArg) => {
@@ -31,7 +29,16 @@ const PLTab: FC<Props> = (props) => {
             }
             // custom btn tab
             else if (React.isValidElement(thisArg!.props.tab)) {
-                return thisArg!.props.tab;
+
+                // clone element and merge props to new one .
+                const tabComponent = thisArg!.props.tab;
+                const CustomBtn = React.cloneElement(thisArg!.props.tab, {
+                    onClick: () => {
+                        tabComponent.props.onClick && tabComponent.props.onClick();
+                        setActiveIndex(thisArg!.props.identifier)
+                    }
+                });
+                return CustomBtn
             }
         })
     }, [])

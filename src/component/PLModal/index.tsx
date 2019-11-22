@@ -5,7 +5,8 @@ import PLButton from '../PLButton';
 import PrefixItem from '../PrefixItem';
 import ToolBar from '../ToolBar';
 type Props = {
-    visible?: boolean
+    visible?: boolean,
+    title?: string,
     onOK?: () => void,
     onCancel?: () => void,
     onOverlayClcik?: () => void
@@ -28,10 +29,10 @@ const PLModal: FC<Props> = (props) => {
     }
 
     return (
-        <>
+        <div className="pl-modal-container">
             <div className={`pl-modal-box  ${props.visible ? 'pop-up' : 'pop-out'}`}>
                 <div className="pl-modal-box-head">
-                    <h3 className="pl-modal-box-head-title">修改資訊</h3>
+                    <h3 className="pl-modal-box-head-title">{props.title ? props.title : ""}</h3>
                 </div>
                 <div className="pl-modal-box-body">
                     {props.children}
@@ -44,7 +45,7 @@ const PLModal: FC<Props> = (props) => {
                 </div>
             </div>
             <Overlay show={props.visible} onClick={onOverlayClick} />
-        </>
+        </div>
     );
 };
 

@@ -24,7 +24,7 @@ const columns: PLColumnProps<MapInterface>[] = [{
     title: "名称",
     dataKey: "name",
     key: "name",
-    render: (value: any, rowData) => <span style={{ color: "red" }}>{rowData.name}</span>
+    render: (value, rowData) => <span style={{ color: "red" }}>{rowData.name}</span>
 }, {
     title: "年龄",
     dataKey: "age",
@@ -39,7 +39,11 @@ const TableViewTemplate: FC<Props> = (props) => {
 
     return (
         <div style={{ padding: "10vh 15px" }}>
-            <PLTableView<MapInterface> columns={columns} datasource={dataMap} />
+            <PLTableView<MapInterface>
+                columns={columns}
+                datasource={dataMap}
+                rowKey={"name"}
+            />
         </div>
     );
 };

@@ -9,7 +9,7 @@ export interface PLColumnProps<T = {}> {
 }
 
 type Props<T> = {
-    keyRow?: string;
+    rowKey?: keyof T;
     datasource: T[],
     columns: PLColumnProps<T>[]
 }
@@ -29,13 +29,12 @@ function PLTableView<T = any>(props: Props<T>) {
             </thead>
             <tbody>
                 {
-                    props.datasource.map((item) => {
+                    props.datasource.map((item, index) => {
                         return (
-                            <tr>
+                            <tr key={props.rowKey ? (item as any)[props.rowKey] : index}>
                                 {
                                     props.columns.map(col => {
                                         return (
-
                                             <td key={col.key}>
                                                 <div className="prefix-label">{col.title}</div>
                                                 <div className="td-content">
@@ -58,3 +57,4 @@ function PLTableView<T = any>(props: Props<T>) {
 };
 
 export default PLTableView;
+
