@@ -1,11 +1,19 @@
+@import src/assets/styles/company-colors/style-1-colors
+
 .pl-btn-container
     position: relative
     z-index: 1
     overflow: hidden
     margin: 0
-    padding: 9px
+    padding: 4px 6px
     border: 0
     outline: none
+    border: 1px solid #a8a8a8
+    border-radius: 8px
+    background: #eee
+    transition: border-color .25s ease-out
+    &:hover
+        border: 1px solid $main-color
 
     .ripple
         position: absolute

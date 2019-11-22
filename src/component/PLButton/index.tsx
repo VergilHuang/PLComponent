@@ -1,4 +1,4 @@
-import React, { useState, useEffect, FC, useRef } from 'react'
+import React, { useEffect, FC, useRef } from 'react'
 import './style.sass'
 type Props = {
     needRipple?: boolean,
