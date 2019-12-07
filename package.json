@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@storybook/addon-actions": "^5.2.8",
     "@types/jest": "24.0.22",
     "@types/moment": "^2.13.0",
     "@types/node": "12.12.7",
@@ -22,7 +23,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,6 +42,7 @@
     ]
   },
   "devDependencies": {
+    "@storybook/react": "^5.2.8",
     "@types/react-router-config": "^5.0.1"
   }
 }

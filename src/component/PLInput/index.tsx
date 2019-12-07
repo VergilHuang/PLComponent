@@ -91,7 +91,7 @@ const PLInput: FC<Props> = (props) => {
                 className="pl-input"
                 onChange={e => {
                     setValue(e.target.value)
-                    console.log(e.target.value);
+                    // console.log(e.target.value);
                     onChange && onChange(e)
                 }} />
 

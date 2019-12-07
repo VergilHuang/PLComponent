@@ -4,13 +4,13 @@ type Props = {
 
 }
 
-const ProgressBar: FC<Props> = () => {
+const PLProgressBar: FC<Props> = () => {
 
     return (
-        <div className="">
-
+        <div className="pl-progress-bar">
+            
         </div>
     )
 }
 
-export default ProgressBar
+export default PLProgressBar

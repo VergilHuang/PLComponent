@@ -14,14 +14,7 @@ const NavigationSideBar: FC<Props> = (props) => {
     return (
         <>
             <nav className={`navigation-sidebar-container ${props.active ? "sidebar-show" : "sidebar-hide"}`}>
-                <ul className={`sidebar-list ${props.active ? "sidebar-list-show" : "sidebar-list-hide"}`}>
-                    <li className="sidebar-list-item">list</li>
-                    <li className="sidebar-list-item">list</li>
-                    <li className="sidebar-list-item">list</li>
-                    <li className="sidebar-list-item">list</li>
-                    <li className="sidebar-list-item">list</li>
-                    <li className="sidebar-list-item">list</li>
-                </ul>
+                {props.children}
             </nav>
             <Overlay show={props.active} onClick={onOverlayClick} />
         </>
