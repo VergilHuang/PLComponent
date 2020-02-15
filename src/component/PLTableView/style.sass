@@ -3,6 +3,7 @@
     border-collapse: collapse
     width: 100%
     tr
+
         th,td
             // border: 1px solid #a8a8a8
             text-align: center
@@ -18,9 +19,12 @@
     tr:nth-child(even)
         background: #eee
 
-@media ( max-width: 768px ) 
+@media ( max-width: 768px )
     .responsive-tableview
         tr
+            display: block
+            margin-bottom: 20px
+
             th
                 display: none
             td

@@ -1,7 +1,7 @@
 import React from 'react';
-// import { action } from '@storybook/addon-actions'
-import PLInput, { PLInputOptionProps } from '.';
-import PrefixItem from '../PrefixItem';
+import './style.sass';
+import PLInput, { PLInputOptionProps } from '../../component/PLInput';
+import PrefixItem from '../../component/PrefixItem';
 
 export default {
     component: PLInput,

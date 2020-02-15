@@ -2,14 +2,13 @@
 @import src/assets/styles/grid-def
 
 $content-padding: 8px 16px
-$mw: 40vw
+$mw: 600px
 $mh: 30vh
 
 .pl-modal-container
     position: fixed
     top: 0
     left: 0
-    z-index: -1
     width: 100vw
     height: 100vh
     display: flex
@@ -22,8 +21,10 @@ $mh: 30vh
         z-index: 9999
         min-width: $mw
         min-height: $mh
+        width: auto
         box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.5)
         border-radius: 6px
+        overflow: hidden
 
         &.pop-up
             animation: scale-reverse 0.3s
@@ -37,7 +38,8 @@ $mh: 30vh
 
         .pl-modal-box-head
             padding: $content-padding
-            height: 26px
+            height: 45px
+            box-sizing: border-box
             border-bottom: 1px solid #a8a8a8
 
             .pl-modal-box-head-title
@@ -64,6 +66,39 @@ $mh: 30vh
             .pl-modal-cancel-btn
                 margin-left: 8px
 
+        .pl-close-btn
+            position: absolute
+            right: 10px
+            top: 10px
+            display: inline-block
+            width: 26px
+            height: 26px
+            cursor: pointer
+            overflow: hidden
+            &:before
+                content: ""
+                display: block
+                width: 100%
+                height: 2px
+                background: #000
+                border-radius: 2px
+                transform: rotate(-45deg)
+                transform-origin: center
+                box-shadow: 0 0 1px 1px rgba(25,25,25,0.2)
+                margin-top: 50%
+
+            &:after
+                content: ""
+                display: block
+                width: 100%
+                height: 2px
+                background: #000
+                border-radius: 2px
+                transform: rotate(45deg)
+                transform-origin: center
+                box-shadow: 0 0 1px 1px rgba(25,25,25,0.2)
+                margin-top: -1px
+
 @media (max-width: $sm)
     .pl-modal-container
         .pl-modal-box
@@ -77,6 +112,10 @@ $mh: 30vh
                 height: 40px
                 text-align: center
                 border-bottom: none
+
+            .pl-close-btn
+                width: 46px
+                height: 46px
 
 @keyframes scale-reverse
     to
