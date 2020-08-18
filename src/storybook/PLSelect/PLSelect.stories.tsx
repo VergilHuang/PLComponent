@@ -1,5 +1,6 @@
 import React from "react";
 import PLSelect from "../../component/PLSelect";
+import Reminder from "../../component/Reminder";
 
 export default {
   component: PLSelect,
@@ -9,10 +10,10 @@ export default {
 export const DefaultSelect = () => {
   return (
     <>
-      <div style={{ marginBottom: 20 }}>
+      <Reminder>
         This contains native Select tag, can completly support mobile browser
         use.
-      </div>
+      </Reminder>
       <PLSelect holderLabel="choose your option">
         <option value="volvo">Volvo</option>
         <option value="saab">Saab</option>

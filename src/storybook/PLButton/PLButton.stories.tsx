@@ -9,5 +9,5 @@ export default {
 };
 
 export const withOutRipple = () => <PLButton needRipple={false} onClick={action('clicked')}>Hello Button</PLButton>;
-export const withRipple = () => <PLButton onClick={action('clicked')}>Hello Button</PLButton>;
-export const withColorfulRipple = () => <PLButton rippleColor={"rgba(0,0,0,0.8)"} onClick={action('clicked')}>Hello Button</PLButton>;
+export const withDefaultRipple = () => <PLButton onClick={action('clicked')}>Hello Button</PLButton>;
+export const withColorRipple = () => <PLButton rippleColor={"rgba(0,0,0,0.8)"} onClick={action('clicked')}>Hello Button</PLButton>;

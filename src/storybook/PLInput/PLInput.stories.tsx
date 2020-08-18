@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.sass';
 import PLInput, { PLInputOptionProps } from '../../component/PLInput';
-import PrefixItem from '../../component/PrefixItem';
+// import PrefixItem from '../../component/PrefixItem';
 
 export default {
     component: PLInput,
@@ -9,22 +9,24 @@ export default {
 };
 
 export const defaultInput = () => <PLInput placeholder="text here" />
+
 export const withLabelAnimation = () => (
     <>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"姓名"} />
+            <PLInput holderLabel={"Name:"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"身高"} />
+            <PLInput holderLabel={"Age:"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"電話"} />
+            <PLInput holderLabel={"Phone Number:"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"住址"} />
+            <PLInput holderLabel={"Address:"} />
         </div>
     </>
 )
+
 const options: PLInputOptionProps = {
     rules: [{
         message: "只能輸入長度6以下的中文字",
@@ -34,33 +36,33 @@ const options: PLInputOptionProps = {
 export const withLabelAnimationAndValidation = () => (
     <>
         <div style={{ paddingTop: 28 }}>
-            <PLInput options={options} holderLabel={"姓名"} defaultValue={"abcdefgh"} />
+            <PLInput options={options} holderLabel={"Name:"} defaultValue={"abcdefgh"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"身高"} />
+            <PLInput holderLabel={"Age:"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"電話"} />
+            <PLInput holderLabel={"Phone Number:"} />
         </div>
         <div style={{ paddingTop: 28 }}>
-            <PLInput holderLabel={"住址"} />
+            <PLInput holderLabel={"Address:"} />
         </div>
     </>
 )
 
-export const withFixedLabelAndValidation = () => (
-    <>
-        <PrefixItem item="姓名:" prefixWidth={"3rem"}>
-            <PLInput options={options} placeholder={"請輸入姓名"} defaultValue={"abcdefgh"} />
-        </PrefixItem>
-        <PrefixItem item="身高:" prefixWidth={"3rem"}>
-            <PLInput placeholder={"請輸入身高"} />
-        </PrefixItem>
-        <PrefixItem item="電話:" prefixWidth={"3rem"}>
-            <PLInput placeholder={"請輸入電話"} />
-        </PrefixItem>
-        <PrefixItem item="住址:" prefixWidth={"3rem"}>
-            <PLInput placeholder={"請輸入住址"} />
-        </PrefixItem>
-    </>
-)
+// export const withFixedLabelAndValidation = () => (
+//     <>
+//         <PrefixItem item="Name:" prefixWidth={"4rem"}>
+//             <PLInput options={options} placeholder={"請輸入姓名"} defaultValue={"abcdefgh"} />
+//         </PrefixItem>
+//         <PrefixItem item="Age:" prefixWidth={"4rem"}>
+//             <PLInput placeholder={"請輸入身高"} />
+//         </PrefixItem>
+//         <PrefixItem item="Phone:" prefixWidth={"4rem"}>
+//             <PLInput placeholder={"請輸入電話"} />
+//         </PrefixItem>
+//         <PrefixItem item="Address:" prefixWidth={"4rem"}>
+//             <PLInput placeholder={"請輸入住址"} />
+//         </PrefixItem>
+//     </>
+// )

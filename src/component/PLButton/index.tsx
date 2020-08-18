@@ -64,7 +64,7 @@ const PLButton: FC<Props> = ({ needRipple = true, rippleColor = "#fff", children
         <button
             ref={btnRef}
             {...otherProps}
-            className="pl-btn-container"
+            className={`pl-btn-container ${otherProps.className || ""}`}
         >
             {children}
         </button>

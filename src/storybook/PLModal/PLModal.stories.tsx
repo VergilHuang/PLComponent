@@ -13,14 +13,14 @@ export const defaultModal = () => (
             visible={true}
             // needFooter={false}
             // needHeader={false}
-            title={"這是一個demo"}
+            title={"This modal is not done."}
             className="fix-width"
             onCancel={() => {
                 console.log('cancel')
             }}
             onOverlayClcik={() => { }}
         >
-            愛新覺羅
+            RWD Modal frendly to mobile display.
             </PLModal>
     </div>
 )

@@ -1,5 +1,6 @@
 import PLTableView, { PLColumnProps } from "../../component/PLTableView";
 import React from "react";
+import Reminder from "../../component/Reminder";
 
 export default {
   component: PLTableView,
@@ -49,7 +50,11 @@ const columns: PLColumnProps<MapInterface>[] = [
 ];
 
 export const defaultTableView = () => {
-  return (
+  return <>
+    <Reminder>
+      RWD design, transform a table component into card list structure.
+      <span style={{ color: "red" }}>No complete.</span>
+    </Reminder>
     <PLTableView<MapInterface>
       datasource={dataMap}
       columns={columns}
@@ -58,5 +63,5 @@ export const defaultTableView = () => {
         console.log(item);
       }}
     />
-  );
+  </>
 };

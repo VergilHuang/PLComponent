@@ -5,7 +5,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
     body {
-        background: #f8f8f8;
+        /* background: #f8f8f8; */
         margin: 20px
     }
 `;

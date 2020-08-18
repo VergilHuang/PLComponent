@@ -1,15 +1,17 @@
-import React, { FC, useEffect, useState, ReactNode } from 'react';
+import React, { FC } from "react";
+import "./style.sass";
+
 export type PLTabPanelProps = {
-    identifier: string | number,
-    tab: React.ReactElement | string;
-}
+  className?: string;
+  identifier: string | number;
+  tab: React.ReactElement | string;
+};
 
 export const PLTabPanel: FC<PLTabPanelProps> = (props) => {
-
-    return (
-        <div className="pl-tab-panel-container">
-            {props.children}
-        </div>
-    )
-}
+  return (
+    <div className={`pl-tab-panel-container ${props.className || ""}`}>
+      {props.children}
+    </div>
+  );
+};
 export default PLTabPanel;
