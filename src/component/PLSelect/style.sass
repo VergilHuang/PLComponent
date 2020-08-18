@@ -1,0 +1,56 @@
+@import "../../assets/styles/_basic-comp"
+
+.pl-select-container
+    @extend %inputBasicStyle
+
+    &.disabled
+        background-color: #ebebe4
+        .pl-select
+            background-color: #ebebe4
+
+    .pl-select
+        width: 100%
+        outline: none
+        border: 0
+        padding: 2px
+        -webkit-appearance: none
+        background-color: #fff
+        ::-webkit-inner-spin-button
+            visibility: hidden
+
+        // &:focus + .pl-input-placeholder
+
+    .pl-select-placeholder
+        color: #a0a0a0
+        position: absolute
+        z-index: -1
+        opacity: 0
+        top: calc(50% - 0.45rem)
+        left: 9px
+        font-size: 0.9rem
+        user-select: none
+        cursor: text
+        transition: all 0.25s ease-in-out
+
+        &.offset-up
+            z-index: 1
+            opacity: 1
+            top: -19px
+            left: 0
+            font-size: 0.75rem
+            color: #333
+            font-weight: 500
+
+    .pl-select-arrow
+        position: absolute
+        top: calc(50% - 10px)
+        right: 16px
+        width: 12px
+        height: 12px
+        border: 1px solid #a0a0a0
+        border-top: 0
+        border-left: 0
+        z-index: 1
+        transform: rotate(45deg)
+        pointer-events: none
+        transition: all 0.3s ease-in-out

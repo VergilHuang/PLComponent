@@ -1,14 +1,9 @@
 @import src/assets/styles/company-colors/style-1-colors
+@import "../../assets/styles/_basic-comp"
 
 .pl-input-container
-    display: inline-block
-    border: 1px solid #888
-    border-radius: 8px
-    background: #fff
-    padding: 2px 8px 3px
-    min-width: 160px
-    position: relative
-    transition: border-color 0.25s ease-in-out
+    @extend %inputBasicStyle
+
 
     &.danger
         border-color: $danger
@@ -18,17 +13,16 @@
 
     .pl-input
         width: 100%
-        height: 18px
+        height: 100%
         outline: none
         border: 0
-        padding: 2px
 
         // &:focus + .pl-input-placeholder
 
     .pl-input-placeholder
         color: $input-placeholder-color
         position: absolute
-        top: 4px
+        top: calc(50% - 0.45rem)
         left: 9px
         font-size: 0.9rem
         user-select: none

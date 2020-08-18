@@ -37,7 +37,7 @@ const PLInput: FC<Props> = (props) => {
     useEffect(() => {
         if (hasRule()) {
             for (const _rule of options!.rules!) {
-                // must have message
+                // suggest have message
                 if (!!_rule.message === false) console.warn('Rule that need message!')
                 const valid = checkValidate(_rule, Value)
                 if (!valid) {
@@ -86,12 +86,11 @@ const PLInput: FC<Props> = (props) => {
         <div className={`pl-input-container ${msgOption.show ? msgOption.type : ''}`}>
             <input
                 {...inputProps}
-                placeholder={typeof holderLabel === 'string' ? undefined : placeholder}  // holderLabel is priorty
+                placeholder={typeof holderLabel === 'string' ? undefined : placeholder}  // holderLabel get higher priorty
                 ref={inputRef}
                 className="pl-input"
                 onChange={e => {
                     setValue(e.target.value)
-                    // console.log(e.target.value);
                     onChange && onChange(e)
                 }} />
 
