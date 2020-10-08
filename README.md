@@ -2,6 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Available Scripts
 
+First, you have to 'yarn'.
 In the project directory, you can run:
 
 ### `yarn storybook`
