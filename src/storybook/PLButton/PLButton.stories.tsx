@@ -1,7 +1,7 @@
 import React from 'react';
 import './style.sass';
 import { action } from '@storybook/addon-actions'
-import PLButton from '../../component/PLButton';
+import PLButton from '../../components/PLButton';
 
 export default {
     component: PLButton,

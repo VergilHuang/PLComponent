@@ -2,8 +2,8 @@ import React, { useState, useMemo } from 'react';
 import { Switch, HashRouter, Redirect } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import './App.sass';
-import NavigationHead from './component/NavigationHead';
-import NavigationSideBar from './component/NavigationSideBar';
+import NavigationHead from './components/NavigationHead';
+import NavigationSideBar from './components/NavigationSideBar';
 import routeConfig from './model/router/routeConfig';
 
 

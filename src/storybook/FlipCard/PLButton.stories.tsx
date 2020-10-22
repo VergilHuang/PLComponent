@@ -1,9 +1,9 @@
 import React from "react";
-import FlipCard from "../../component/FlipCard/FlipCard";
+import FlipCard from "../../components/FlipCard/FlipCard";
 
 export default {
     component: FlipCard,
-    title: "FlixCard"
+    title: "FlipCard"
 }
 
 export const defaultCard = () => <FlipCard />

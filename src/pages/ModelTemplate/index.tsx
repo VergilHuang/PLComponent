@@ -1,5 +1,5 @@
 import React, { FC, useState } from 'react';
-import PLModal from '../../component/PLModal';
+import PLModal from '../../components/PLModal';
 type Props = {
 
 }

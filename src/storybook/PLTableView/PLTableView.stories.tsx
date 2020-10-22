@@ -1,6 +1,6 @@
-import PLTableView, { PLColumnProps } from "../../component/PLTableView";
+import PLTableView, { PLColumnProps } from "../../components/PLTableView";
 import React from "react";
-import Reminder from "../../component/Reminder";
+import Reminder from "../../components/Reminder";
 
 export default {
   component: PLTableView,

@@ -1,10 +1,10 @@
 import React, { useState, FC } from "react";
 import "./style.sass";
-import PLTab from "../../component/PLTab";
+import PLTab from "../../components/PLTab";
 import $$ from "../../utils/utils";
-import PLTabPanel from "../../component/PLTab/PLTabPanel";
-import PLButton from "../../component/PLButton";
-import Reminder from "../../component/Reminder";
+import PLTabPanel from "../../components/PLTab/PLTabPanel";
+import PLButton from "../../components/PLButton";
+import Reminder from "../../components/Reminder";
 
 export default {
   component: PLTab,

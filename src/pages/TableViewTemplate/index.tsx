@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import PLTableView, { PLColumnProps } from '../../component/PLTableView';
+import PLTableView, { PLColumnProps } from '../../components/PLTableView';
 type Props = {
 
 }

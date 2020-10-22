@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import PLButton from '../../component/PLButton';
+import PLButton from '../../components/PLButton';
 type Props = {
 
 }

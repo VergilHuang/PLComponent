@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.sass';
-import PLModal from '../../component/PLModal';
+import PLModal from '../../components/PLModal';
 
 export default {
     component: PLModal,

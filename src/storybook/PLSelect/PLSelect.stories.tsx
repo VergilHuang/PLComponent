@@ -1,6 +1,6 @@
 import React from "react";
-import PLSelect from "../../component/PLSelect";
-import Reminder from "../../component/Reminder";
+import PLSelect from "../../components/PLSelect";
+import Reminder from "../../components/Reminder";
 
 export default {
   component: PLSelect,

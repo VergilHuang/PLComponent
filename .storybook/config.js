@@ -1,6 +1,7 @@
 import { configure, addParameters, addDecorator } from "@storybook/react";
 import { GlobalStyle } from "./globalStyle";
-import React, { ReactNode } from "react";
+import React from "react";
+import { Normalize } from "styled-normalize";
 
 addParameters({
   options: {
@@ -56,9 +57,11 @@ addParameters({
 
 addDecorator((style) => (
   <>
+    <Normalize />
     <GlobalStyle />
     {style()}
   </>
 ));
+
 
 configure(require.context("../src", true, /\.stories\.tsx$/), module);

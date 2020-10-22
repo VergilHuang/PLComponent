@@ -1,0 +1,45 @@
+$border-color: rgba(0,0,0,0.125)
+
+.accordion-item-container
+    text-align: left
+    border: 1px solid rgba(0,0,0,0.125)
+    border-bottom: 0
+    margin: 0px
+    transition: all .4s ease-in-out
+
+    &.expanded
+        margin: 20px 0
+        border-bottom: 1px solid $border-color
+        box-shadow: 0px 2px 1px -1px rgba(0,0,0,0.2), 0px 1px 1px 0px rgba(0,0,0,0.14), 0px 1px 3px 0px rgba(0,0,0,0.12)
+
+    &:first-child
+        margin-top: 0
+        border-radius: 8px 8px 0 0
+        overflow: hidden
+
+    &:last-child
+        margin-bottom: 0
+        border-radius: 0 0 8px 8px
+        overflow: hidden
+
+    .accordion-item-head
+        border-bottom: 1px solid $border-color
+        background: #eee
+
+        .accordion-item-head-wrapper
+            height: 100%
+            padding: 8px 20px
+            cursor: pointer
+
+    .accordion-item-body
+        height: 120px
+        min-height: 0px
+        overflow: hidden
+        transition: height .4s ease-in-out
+
+        &.collepse
+            height: 0px
+
+        .content-wrapper
+            padding: 12px 20px
+            height: 100%

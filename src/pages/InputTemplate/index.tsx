@@ -1,5 +1,5 @@
 import React, { FC, useEffect, useState } from 'react';
-import PLInput from '../../component/PLInput';
+import PLInput from '../../components/PLInput';
 type Props = {
 
 }

@@ -1,7 +1,7 @@
 import React, { FC, useState } from 'react';
-import PLTab from '../../component/PLTab';
-import PLButton from '../../component/PLButton';
-import PLTabPanel from '../../component/PLTab/PLTabPanel';
+import PLTab from '../../components/PLTab';
+import PLButton from '../../components/PLButton';
+import PLTabPanel from '../../components/PLTab/PLTabPanel';
 type Props = {
 }
 

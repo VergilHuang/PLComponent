@@ -1,6 +1,6 @@
 import React from 'react';
 import './style.sass';
-import PLInput, { PLInputOptionProps } from '../../component/PLInput';
+import PLInput, { PLInputOptionProps } from '../../components/PLInput';
 // import PrefixItem from '../../component/PrefixItem';
 
 export default {
