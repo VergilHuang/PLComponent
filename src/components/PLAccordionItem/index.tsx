@@ -11,14 +11,14 @@ const PLAccordionItem: FC<Props> = ({ isCollepse, onPanelClick, ...itemData }) =
     return (
         <div className={`accordion-item-container ${!isCollepse ? "expanded" : ""}`}>
             <div className="accordion-item-head" >
-                <div className="accordion-item-head-wrapper" onClick={() => {
+                <div className="panel-wrapper" onClick={() => {
                     onPanelClick && onPanelClick(itemData.dataKey)
                 }}>
                     <span>{itemData.title}</span>
                 </div>
             </div>
             <div className={`accordion-item-body ${isCollepse ? "collepse" : ""}`}>
-                <div className="content-wrapper">
+                <div className="summery-wrapper">
                     <span>{itemData.description}</span>
                 </div>
             </div>

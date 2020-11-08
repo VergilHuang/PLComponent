@@ -11,7 +11,7 @@ const PLAccordion: FC<Props> = (props) => {
     const [collepseKey, setCollepseKey] = useState<number | string>();
 
     return (
-        <div className="accodion-container">
+        <div className="accordion-container">
             {props.datasource.map((item) => {
                 return <PLAccordionItem key={item.dataKey} {...item} isCollepse={collepseKey === item.dataKey ? false : true} onPanelClick={(dataKey) => {
                     setCollepseKey(pre => {

@@ -11,7 +11,6 @@
     "@types/react-dom": "16.9.4",
     "@types/react-router-dom": "^5.1.2",
     "moment": "^2.24.0",
-    "node-sass": "^4.13.1",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-router-config": "^5.1.1",
@@ -30,6 +29,7 @@
     "storybook": "start-storybook"
   },
   "scripts": {
+    "start": "react-scripts start",
     "storybook": "start-storybook"
   },
   "eslintConfig": {
@@ -50,6 +50,7 @@
   "devDependencies": {
     "@storybook/react": "^5.2.8",
     "@types/react-router-config": "^5.0.1",
-    "@types/styled-components": "^5.1.2"
+    "@types/styled-components": "^5.1.2",
+    "node-sass": "^4.12.0"
   }
 }
